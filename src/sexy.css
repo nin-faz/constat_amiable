@@ -1,0 +1,46 @@
+/* Ajoute un fond général sexy, police moderne et quelques utilitaires globaux */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Montserrat", system-ui, sans-serif;
+  background: linear-gradient(135deg, #e0e7ff 0%, #f0f4ff 100%);
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: #e0e7ff;
+}
+::-webkit-scrollbar-thumb {
+  background: #a5b4fc;
+  border-radius: 8px;
+}
+
+/* Animations utilitaires */
+.animate-fade-in {
+  animation: fadeIn 0.7s ease-in;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Pour les boutons sexy */
+.btn-sexy {
+  @apply bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-500 text-white font-semibold px-6 py-2 rounded-xl shadow-lg hover:from-blue-700 hover:to-purple-600 transition-all duration-300;
+}
+
+/* Pour les cartes sexy */
+.card-sexy {
+  @apply bg-white/80 backdrop-blur-lg border border-blue-100 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300;
+}

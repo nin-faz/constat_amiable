@@ -16,30 +16,29 @@ export default function Guide() {
   }, []);
 
   return (
-    <main className="flex-1 bg-gradient-to-b from-blue-50 to-gray-50 py-12 relative overflow-hidden">
-      {/* Éléments décoratifs */}
-      <div className="absolute top-0 left-0 w-64 h-64 bg-blue-100 rounded-full opacity-20 -translate-x-1/2 -translate-y-1/2"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-200 rounded-full opacity-20 translate-x-1/3 translate-y-1/3"></div>
-
+    <main className="flex-1 min-h-screen bg-gradient-to-br from-purple-100 via-blue-50 to-indigo-100 py-16 relative overflow-hidden animate-fade-in font-['Montserrat','Poppins','sans-serif']">
+      {/* Effet de lumière et de verre */}
+      <div className="absolute top-0 left-0 w-full h-96 bg-gradient-to-r from-blue-600/40 via-indigo-400/30 to-purple-400/40 blur-2xl opacity-60 -z-10 animate-fade-in"></div>
+      <div className="absolute bottom-0 right-0 w-1/2 h-80 bg-gradient-to-br from-purple-300/40 via-blue-200/30 to-indigo-200/40 blur-2xl opacity-60 -z-10 animate-fade-in"></div>
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12 relative z-10 transform transition-all duration-700 hover:scale-105">
             <div className="relative inline-block">
-              <div className="absolute inset-0 bg-blue-200 rounded-full blur-xl opacity-30 animate-pulse"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-200 via-indigo-200 to-purple-200 rounded-full blur-xl opacity-40 animate-pulse"></div>
               <Shield className="h-20 w-20 text-blue-600 mx-auto mb-4 relative z-10 transform transition-all duration-500 hover:rotate-12" />
             </div>
-            <h1 className="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800">
+            <h1 className="text-5xl font-extrabold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-indigo-500 to-purple-600 drop-shadow-lg tracking-wide animate-fade-in">
               Guide du Constat Amiable
             </h1>
-            <p className="text-gray-600 text-lg max-w-xl mx-auto">
+            <p className="text-gray-700 text-lg max-w-xl mx-auto animate-fade-in">
               Suivez ces étapes essentielles pour bien remplir votre constat
             </p>
           </div>
         </div>
 
         {/* Visual Flow Diagram */}
-        <div className="max-w-5xl mx-auto bg-white rounded-xl shadow-lg p-8 mb-12 border border-blue-100 transform transition-all duration-500 hover:shadow-xl relative overflow-hidden group">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div className="max-w-5xl mx-auto bg-gradient-to-br from-blue-50 via-white to-purple-100 rounded-3xl shadow-2xl p-10 mb-12 border-0 transform transition-all duration-500 hover:shadow-2xl relative overflow-hidden group animate-fade-in">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-100 via-indigo-100 to-purple-100 opacity-30"></div>
 
           <div className="flex items-center justify-center mb-8">
             <div className="bg-blue-100 p-3 rounded-full text-blue-600 mr-4">
@@ -70,7 +69,7 @@ export default function Guide() {
             </div>
 
             {/* Step 1 */}
-            <div className="relative bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl shadow-sm border-2 border-blue-200 transform transition-all duration-500 hover:shadow-md hover:-translate-y-1 hover:border-blue-400 group">
+            <div className="relative bg-gradient-to-br from-blue-100 via-indigo-100 to-purple-100 p-6 rounded-2xl shadow-md border-2 border-blue-200 transform transition-all duration-500 hover:shadow-xl hover:-translate-y-1 hover:border-blue-400 group animate-fade-in">
               <div className="absolute -top-4 -left-4 bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold transform transition-all duration-500 group-hover:scale-110 group-hover:bg-blue-700">
                 1
               </div>
@@ -98,7 +97,7 @@ export default function Guide() {
             </div>
 
             {/* Step 2 */}
-            <div className="relative bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl shadow-sm border-2 border-blue-200 transform transition-all duration-500 hover:shadow-md hover:-translate-y-1 hover:border-blue-400 group">
+            <div className="relative bg-gradient-to-br from-blue-100 via-indigo-100 to-purple-100 p-6 rounded-2xl shadow-md border-2 border-blue-200 transform transition-all duration-500 hover:shadow-xl hover:-translate-y-1 hover:border-blue-400 group animate-fade-in">
               <div className="absolute -top-4 -left-4 bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold transform transition-all duration-500 group-hover:scale-110 group-hover:bg-blue-700">
                 2
               </div>
@@ -129,7 +128,7 @@ export default function Guide() {
             </div>
 
             {/* Step 3 */}
-            <div className="relative bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl shadow-sm border-2 border-blue-200 transform transition-all duration-500 hover:shadow-md hover:-translate-y-1 hover:border-blue-400 group">
+            <div className="relative bg-gradient-to-br from-blue-100 via-indigo-100 to-purple-100 p-6 rounded-2xl shadow-md border-2 border-blue-200 transform transition-all duration-500 hover:shadow-xl hover:-translate-y-1 hover:border-blue-400 group animate-fade-in">
               <div className="absolute -top-4 -left-4 bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold transform transition-all duration-500 group-hover:scale-110 group-hover:bg-blue-700">
                 3
               </div>
@@ -160,7 +159,7 @@ export default function Guide() {
             </div>
 
             {/* Step 4 */}
-            <div className="relative bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl shadow-sm border-2 border-blue-200 transform transition-all duration-500 hover:shadow-md hover:-translate-y-1 hover:border-blue-400 group">
+            <div className="relative bg-gradient-to-br from-blue-100 via-indigo-100 to-purple-100 p-6 rounded-2xl shadow-md border-2 border-blue-200 transform transition-all duration-500 hover:shadow-xl hover:-translate-y-1 hover:border-blue-400 group animate-fade-in">
               <div className="absolute -top-4 -left-4 bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold transform transition-all duration-500 group-hover:scale-110 group-hover:bg-blue-700">
                 4
               </div>
@@ -193,8 +192,8 @@ export default function Guide() {
         </div>
 
         {/* Example Constat Form */}
-        <div className="max-w-5xl mx-auto bg-white rounded-xl shadow-lg p-8 mb-12 border border-blue-100 transform transition-all duration-500 hover:shadow-xl relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-transparent opacity-30"></div>
+        <div className="max-w-5xl mx-auto bg-gradient-to-br from-blue-50 via-white to-purple-100 rounded-3xl shadow-2xl p-10 mb-12 border-0 transform transition-all duration-500 hover:shadow-2xl relative overflow-hidden animate-fade-in">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-100 via-indigo-100 to-purple-100 opacity-30"></div>
           <div className="absolute top-0 right-0 w-32 h-32 bg-blue-100 rounded-full opacity-20 -translate-y-1/2 translate-x-1/2"></div>
 
           <div className="flex items-center justify-center mb-8 relative z-10">
@@ -728,7 +727,7 @@ export default function Guide() {
           </div>
 
           {/* Tips Section */}
-          <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-8 rounded-xl shadow-md border border-blue-200 relative overflow-hidden">
+          <div className="bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-100 p-8 rounded-2xl shadow-lg border border-blue-200 relative overflow-hidden animate-fade-in">
             <div className="absolute top-0 right-0 w-32 h-32 bg-blue-200 rounded-full opacity-20 -translate-y-1/2 translate-x-1/2"></div>
 
             <div className="flex items-center justify-center mb-6">
@@ -741,7 +740,7 @@ export default function Guide() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
-              <div className="bg-white p-6 rounded-xl shadow-md border-l-4 border-blue-500 transform transition-all duration-500 hover:shadow-lg hover:-translate-y-1 hover:border-blue-600">
+              <div className="bg-white/90 p-6 rounded-2xl shadow-lg border-l-4 border-blue-500 transform transition-all duration-500 hover:shadow-xl hover:-translate-y-1 hover:border-blue-600 animate-fade-in">
                 <h4 className="font-semibold text-blue-700 mb-4 flex items-center">
                   <CheckCircle2 className="h-5 w-5 mr-2 text-blue-500" />À faire
                 </h4>
@@ -781,7 +780,7 @@ export default function Guide() {
                 </ul>
               </div>
 
-              <div className="bg-white p-6 rounded-xl shadow-md border-l-4 border-red-500 transform transition-all duration-500 hover:shadow-lg hover:-translate-y-1 hover:border-red-600">
+              <div className="bg-white/90 p-6 rounded-2xl shadow-lg border-l-4 border-red-500 transform transition-all duration-500 hover:shadow-xl hover:-translate-y-1 hover:border-red-600 animate-fade-in">
                 <h4 className="font-semibold text-red-700 mb-4 flex items-center">
                   <X className="h-5 w-5 mr-2 text-red-500" />À éviter
                 </h4>
@@ -825,7 +824,7 @@ export default function Guide() {
         </div>
 
         {/* Contact Section */}
-        <div className="max-w-3xl mx-auto bg-white rounded-xl shadow-lg p-8 text-center border border-blue-100 transform transition-all duration-500 hover:shadow-xl relative overflow-hidden">
+        <div className="max-w-3xl mx-auto bg-gradient-to-br from-blue-50 via-white to-purple-100 rounded-3xl shadow-2xl p-10 text-center border-0 transform transition-all duration-500 hover:shadow-2xl relative overflow-hidden animate-fade-in">
           <div className="absolute bottom-0 left-0 w-48 h-48 bg-blue-100 rounded-full opacity-20 translate-y-1/3 -translate-x-1/3"></div>
 
           <div className="relative z-10">

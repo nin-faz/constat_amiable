@@ -12,16 +12,18 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-blue-600 text-white shadow-lg relative">
+    <header className="bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-500 text-white shadow-2xl relative animate-fade-in">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 py-10">
-          <Link to="/" className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2 group">
             <img
               src="/logo-MMA.png"
               alt="Logo"
-              className="h-16 object-contain border rounded-lg"
-            />{" "}
-            <span className="text-xl font-bold">Constat Amiable Guide</span>
+              className="h-16 object-contain border-2 border-blue-300 rounded-2xl shadow-lg group-hover:scale-105 transition-transform duration-300 bg-white/80 backdrop-blur"
+            />
+            <span className="text-2xl font-extrabold bg-gradient-to-r from-blue-100 via-white to-purple-200 bg-clip-text text-transparent drop-shadow-lg tracking-wide animate-fade-in">
+              Constat Amiable Guide
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -30,10 +32,10 @@ export default function Header() {
               <Link
                 key={to}
                 to={to}
-                className="flex items-center space-x-2 px-4 py-2 rounded-lg hover:bg-blue-700 transition-all duration-200"
+                className="flex items-center space-x-2 px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 shadow-md hover:scale-105 transition-transform duration-200 font-semibold text-base tracking-wide"
               >
                 <Icon className="h-5 w-5" />
-                <span className="font-medium">{text}</span>
+                <span>{text}</span>
               </Link>
             ))}
           </nav>
@@ -41,7 +43,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 hover:bg-blue-700 rounded-lg transition"
+            className="md:hidden p-2 rounded-xl bg-white/10 hover:bg-white/20 shadow-md hover:scale-110 transition-transform duration-200"
             aria-label="Toggle menu"
           >
             {isMenuOpen ? (
@@ -55,7 +57,7 @@ export default function Header() {
         {/* Mobile Navigation */}
         <div
           className={`
-            absolute top-full left-0 right-0 bg-blue-600 shadow-lg md:hidden
+            absolute top-full left-0 right-0 bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-500 shadow-2xl md:hidden
             transform transition-transform duration-200 ease-in-out
             ${
               isMenuOpen
@@ -70,7 +72,7 @@ export default function Header() {
                 key={to}
                 to={to}
                 onClick={() => setIsMenuOpen(false)}
-                className="flex items-center space-x-2 hover:bg-blue-700 p-2 rounded-lg transition"
+                className="flex items-center space-x-2 bg-white/10 hover:bg-white/20 p-2 rounded-xl transition font-semibold"
               >
                 <Icon className="h-5 w-5" />
                 <span>{text}</span>
